@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("fonts/stylesheet.css");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+section {
+  margin-bottom: 100px;
+}
+
+section:last-child {
+    margin-bottom: 0;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+section h1 {
+  margin: 0;
+  padding-top: 20px;
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 84px;
+  line-height: 100%;
+  color: #F6F6F6;
+}
+
+.section__title {
+  margin: 50px 80px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.margin-bot-50 {
+  margin-bottom: 50px;
+}
+
+@media (min-width: 0) {
+  .container {
+    width: calc(100% - 80px);
+  }
+  .container:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+/* main menu */
+
+a {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  text-decoration: none;
+  color: rgba(34, 34, 34, 0.8);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #F6F6F6;
+}
+a:hover, a :focus {
+  color: #F6F6F6;
+  opacity: 1;
+}
+
+.menu-left a {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0px;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+header nav .logo {
+  float: left;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
+  margin-right: 1rem;
+  font-size: 0.75rem;
+  line-height: inherit;
+  font-weight: 500;
+}
+header nav .logo:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+header nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+header nav ul li {
+  float: none;
+  margin-left: 0;
+}
+@media (min-width: 1300px) {
+  header nav ul li {
+    float: left;
+    margin-left: 1rem;
+  }
+}
+header nav ul li a {
+  display: block;
+}
+@media (min-width: 576px) {
+  header nav ul li a {
+    display: block;
+    padding: .425rem 0rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  ul {
+    clear: both;
+  }
+  ul li {
+    padding: .5em 0;
+  }
+}
+.hide-nav {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%) !important;
+}
+
+ul.menu-left {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  z-index: 10;
+}
+@media (min-width: 1300px) {
+  ul.menu-left {
+    display: block !important;
+    float: right;
+    max-height: none;
+  }
+}
+ul.menu-left:before {
+  content: '';
+  display: table;
+  clear: both;
+}
+ul.menu-left.collapse {
+  max-height: 15em !important;
+}
+
+.nav-toggle {
+  display: block;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-left: 24px;
+  height: 38px;
+  width: 38px;
+  cursor: pointer;
+  padding: 8px 8px;
+}
+.nav-toggle.open span:first-child {
+  transform: rotate(45deg) translate(1.2px, 1.4px);
+}
+
+.nav-toggle.open span:last-child {
+  transform: rotate(
+    -45deg) translate(2.2px, -3.4000000000000004px);
+}
+
+.nav-toggle span {
+  position: relative;
+  display: block;
+  height: 2px;
+  width: 100%;
+  margin-top: 4px;
+  background-color: #000;
+  transition: all .25s;
+}
+
+.navigation {
+  /* position: absolute; */
+  width: calc(100% - 240px);
+  margin: 33px 80px 0 80px;
+}
+
+/* side menu */
+
+.side__menu {
+  position: absolute;
+  width: 80px;
+  height: 2488px;
+  top: 0;
+  right: 0;
+  background: #D6D6D6;
+}
+
+.menu__text {
+  position: absolute;
+  right: 20px;
+  top: 35px;
+  transform: rotate(90deg);
+  font-size: 0.56em;
+}
+
+/* company block*/
+
+.company-info__block {
+  width: 47.83%;
+  min-height: 800px;
+  background: #5551F7;
+  padding: 0 80px;
+}
+
+.breadcrumbs {
+  padding-top: 236px;
+}
+
+.company-info__line {
+  content: "";
+  height: 1px;
+  width: calc(100% + 160px);
+  margin-left: -80px;
+  margin-top: 195px;
+  background-color: #F6F6F6;
+}
+
+.company-info__block h2 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 160%;
+  color: #F6F6F6;
+}
+
+.company-img__block {
+  width: 52.17%;
+  position: relative;
+  min-height: 800px;
+  z-index: -1;
+  background-image: url(../img/tanks.png);
+  padding: 0 80px;
+  background-size: cover;
+  background-position: center center;
+}
+
+/* about us */
+
+.about-us__block {
+  margin: 0px 80px;
+  display: flex;
+}
+
+h3 {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1em;
+  line-height: 160%;
+  color: #000000;
+  margin: 0;
+}
+
+h2 {
+  font-family: Gilroy;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.5628em;
+  line-height: 150%;
+  color: #000000;
+}
+
+.about-us__text {
+  margin-left: auto;
+  width: 65.22%;
+  padding: 50px 0 0 0;
+}
+
+/* work block*/
+
+.tanks__img {
+  content: "";
+  width: 47.83%;
+  height: 100%;
+  min-height: 250px;
+  position: relative;
+}
+
+.bold {
+  width: 65.22%;
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 0.875em;
+  line-height: 180%;
+  color: #101010;
+}
+
+.text__container {
+  padding: 0 80px;
+}
+
+.list {
+  padding: 0;
+  list-style-type: none;
+}
+
+.list li::before {
+  content: "—";
+  width: 15px;
+  height: 15px;
+  margin-right: 5px;
+}
+
+.auto__block {
+  display: flex;
+  height: 50%;
+}
+
+.railway__block {
+  display: flex;
+  height: 50%;
+}
+
+.slider-img__inactive {
+  display: none;
+  content: "";
+  width: 100%;
+  position: relative;
+  max-height: 500px;
+}
+
+.logo__text {
+  margin: auto 10px;
+  text-align: center;
+}
+
+
+@media (max-width:1100px) {
+  .container {
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .company-info__block {
+    width: 100%;
+  }
+
+  .company-img__block {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .side__menu {
+    background: transparent;
+    color: #F6F6F6;
+    top: 30px;
+    right: 30px;
+    height: 100px;
+  }
+
+  .nav-toggle span {
+    background-color: #F6F6F6;
+  }
+
+  ul.menu-left.collapse {
+    background-color: #5551F7;
+  }
+
+  .about-us__block {
+    flex-direction: column;
+  }
+
+  .section__title h2{
+    margin: 0 0 1.56em 0;
+  }
+
+  .section__title {
+    margin: 0 0 0 30px;
+  }
+
+  .about-us__block h2{
+    margin: 0 0 1.56em 0;
+  }
+
+  .tanks__img {
+    content: "";
+    width: 100%;
+    position: relative;
+    max-height: 500px;
+    min-height: 260px;
+  }
+
+  .slider__images {
+    content: "";
+    width: 100%;
+    position: relative;
+    max-height: 500px;
+    min-height: 320px;
+  }
+
+  .about-us__text {
+    width: 100%;
+    padding: 0;
+  }
+
+  .bold {
+    width: 100%;
+  }
+
+  .company-info__line {
+    display: none;
+  }
+
+  .company-info__block {
+    padding: 0 30px 0 30px;
+  }
+
+  .about-us__block {
+    margin: 30px;
+  }
+
+  .text__container {
+    padding: 0 30px;
+  }
+
+  .navigation {
+    margin: 30px 0 0 30px;
+  }
+
+  .breadcrumbs {
+    padding-top: 136px;
+  }
+
+  .breadcrumbs a {
+    font-size: 0.75em;
+    color: #c0c0c0
+  }
+
+  .menu__text {
+    display: none;
+  }
+
+  section h1 {
+    font-size: 2.5rem;
+  }
+
+  .company-info__block h2{
+    font-size: 1em;
+  }
+
+  .company-info__block {
+    min-height: 400px;
+  }
+
+  .slider {
+    flex-direction: column;
+  }
+
+  .slider-img__car {
+    position: absolute;
+    left: 30px;
+    width: 230px;
+    height: 260px;
+  }
+
+  .slider-img__tank {
+    position: absolute;
+    left: 30px;
+    width: 230px;
+    height: 260px;
+  }
+
+  .slider-img__number {
+    margin-left: 30px;
+  }
+
+  .img-number {
+    font-family: Gilroy;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1C1C1C;
+  }
+}
+
+@media (min-width:600px ) {
+  .company-img__block {
+    min-height: 350px;
+  }
+
+  .tanks__img {
+    min-height: 350px;
+  }
+
+  .slider-img__car {
+    width: 330px;
+    height: 300px;
+  }
+
+  .slider__images {
+    content: "";
+    width: 100%;
+    position: relative;
+    max-height: 500px;
+    min-height: 370px;
+  }
+
+  .header nav .logo {
+    font-size: 1.25em;
+  }
+}
+
+@media (min-width:1100px) {
+  .tanks__img {
+    min-height: 580px;
+  }
+
+  .slider__images {
+    min-height: 580px;
+    max-width: 880px;
+  }
+
+  body {
+    font-size: 25px;
+  }
+
+  .bold {
+    font-size: 0.72em;
+  }
+
+  .auto__text h3 {
+    font-size: 1.38em;
+  }
+
+  .railway__text h3 {
+    font-size: 1.38em;
+  }
+}
